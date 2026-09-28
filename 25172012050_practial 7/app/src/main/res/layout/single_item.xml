@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/contactCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/imagePerson"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:contentDescription="Contact person"
+                android:src="@drawable/person"
+                app:tint="#777777"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <ImageView
+                android:id="@+id/del_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:contentDescription="Delete contact"
+                android:src="@drawable/outline_delete_24"
+                app:tint="#777777"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:text="Contact Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/imagePerson"
+                app:layout_constraintEnd_toStartOf="@id/del_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Contact Mobile no."
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/textview1"
+                app:layout_constraintEnd_toStartOf="@id/del_icon"
+                app:layout_constraintTop_toBottomOf="@id/textview1" />
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Contact Email"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/textview1"
+                app:layout_constraintEnd_toStartOf="@id/del_icon"
+                app:layout_constraintTop_toBottomOf="@id/textview2" />
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Contact Address"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/textview1"
+                app:layout_constraintEnd_toStartOf="@id/del_icon"
+                app:layout_constraintTop_toBottomOf="@id/textview3"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
